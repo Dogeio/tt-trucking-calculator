@@ -1,0 +1,22 @@
+{
+    "name": "tt-trucking-calculator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "npm run build && serve ./dist/",
+        "build": "npx tsc && npx esbuild ./out/index.js --bundle --minify --outfile=dist/index.js && copyfiles -f ./src/static/* dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "elkjs": "^0.10.0",
+        "copyfiles": "^2.4.1",
+        "esbuild": "^0.25.9",
+        "serve": "^14.2.4",
+        "typescript": "^5.8.3"
+    }
+}
